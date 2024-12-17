@@ -51,10 +51,10 @@ if uploaded_file is not None:
         predicted_class = np.argmax(predictions, axis=1)[0]
         confidence = np.max(predictions) * 100
 
-        # Check if the confidence is high enough
-        if confidence > 50:  # You can adjust this threshold
-            st.write(f"Prediction: *{class_labels[predicted_class]}*")
-            st.write(f"Confidence: *{confidence:.2f}%*")
-        else:
-            st.write("Prediction: *Not Found*")
-            st.write("The uploaded image does not belong to any of the trained classes.")
+        # Display results
+        st.write(f"Prediction: *{class_labels.get(predicted_class, 'Unknown')}*")
+        st.write(f"Confidence: *{confidence:.2f}%*")
+
+        # Confidence threshold
+        if confidence < 50:  # Adjust the threshold as needed
+            st.write("The confidence is low; the result might not be accurate.")
