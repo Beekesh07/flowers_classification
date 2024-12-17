@@ -16,3 +16,11 @@ TensorFlow: For making model and making predictions.
 Streamlit: For creating the user interface.
 Pillow: For image processing.
 NumPy: For numerical operations and array manipulation.
+
+### Usage
+Upload an image of a flower by clicking the "Choose an image..." button.
+The app will classify the flower as either Daisy, Sunflower, Rose, Dandelion, or Tulip.
+The app will display the predicted class label and the confidence score.
+If the prediction confidence is below 50%, the app will notify you that the flower image doesn't belong to any of the trained classes.
+### Model Details
+The model used in this application is a simple CNN (Convolutional Neural Network) trained on a flower dataset. It accepts images of size 150x150 pixels and outputs one of the five classes.
