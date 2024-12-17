@@ -12,7 +12,7 @@ Tulip
 The app displays the predicted flower type along with the confidence score.
 If the model is not confident enough (below 50%), it will notify the user that the prediction was not found.
 ### Technologies Used
-TensorFlow: For loading the pre-trained model and making predictions.
+TensorFlow: For making model and making predictions.
 Streamlit: For creating the user interface.
 Pillow: For image processing.
 NumPy: For numerical operations and array manipulation.
